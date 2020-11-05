@@ -19,6 +19,7 @@ This repository contains basic of all data structure with along with some import
     3. Linear Recurrences
     4. Pigeonhole Principle 
     5. Mathematical Expression
+ - Bit Manipulation
  - Tree
  - Binary Search Tree
  - Graph 
