@@ -1,6 +1,5 @@
-package Array.Pep__Fond;
+package Array.Pep__Foundation;
 import java.io.*;
-import java.util.Arrays;
 
 //Find Element in an Array
 public class Sol2 {

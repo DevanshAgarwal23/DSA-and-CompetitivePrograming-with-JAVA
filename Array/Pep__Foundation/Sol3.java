@@ -1,4 +1,4 @@
-package Array.Pep__Fond;
+package Array.Pep__Foundation;
 
 import java.io.BufferedReader;
 import java.io.IOException;
