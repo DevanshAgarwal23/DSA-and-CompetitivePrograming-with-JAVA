@@ -43,6 +43,10 @@ class MySinglyLinkedList{
 public class SLL {
 
     public static void main(String[] args){
-
+        MySinglyLinkedList ll = new MySinglyLinkedList();
+        ll.insertBegin(12);
+        ll.insertBegin(22);
+        ll.insertEnd(33);
+        ll.printList();
     }
 }

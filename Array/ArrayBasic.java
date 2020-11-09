@@ -42,6 +42,9 @@ public class ArrayBasic {
         Collections.reverse(Arrays.asList(arr3));//we can use asList on arrays of non-primitive data type
         System.out.println(Arrays.toString(arr3));
 
+
+
+
     }
 
 

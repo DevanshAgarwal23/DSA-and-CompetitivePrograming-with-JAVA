@@ -60,7 +60,7 @@ public class ArrayListJava {
         System.out.println(Collections.binarySearch(arr2,33));
         Collections.reverse(arr);
         System.out.println(arr);
-        
+
 
 
 
