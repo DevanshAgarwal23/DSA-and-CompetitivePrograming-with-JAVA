@@ -3,7 +3,7 @@ package Array.Pep__Foundation;
 import java.io.*;
 
 //Span of Array
-public class Sol1 {
+public class SpanOfArray {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         int n = Integer.parseInt(br.readLine());
