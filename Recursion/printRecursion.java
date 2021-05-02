@@ -5,8 +5,10 @@ public class printRecursion {
     public static void main(String[] args) {
 //        subsequencesAscii("abc","");
 //        mazePath(0,0,2,2,"");
-        climbingStairs(0,5,"");
+//        climbingStairs(0,5,"");
+        validParenthesis(0,0,3,"");
     }
+
 
     public static void subsequences (String ques, String ans) {
 
@@ -171,6 +173,21 @@ public class printRecursion {
         }
     }
 
+    public static void validParenthesis(int open,int close,int n,String ans){
+        //+ve base case
+        if(open==n && close==n){
+            System.out.println(ans);
+            return;
+        }
+
+        //-ve base case
+        if(open>n || close>open){
+            return;
+        }
+
+        validParenthesis(open+1,close,n,ans+"(");
+        validParenthesis(open,close+1,n,ans+")");
+    }
 
 
 

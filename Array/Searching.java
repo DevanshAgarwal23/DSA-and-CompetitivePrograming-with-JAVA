@@ -1,6 +1,9 @@
 package Array;
 
 public class Searching {
+
+
+    //Time Complexity = O(N)
     public static int linearSearch(int[] a , int key){
         for(int i=0;i<a.length;i++){
             if(a[i]==key)
@@ -8,7 +11,12 @@ public class Searching {
         }
         return -1;
     }
+
+
+
+
     //Prerequisite for binary search ==> array should be sorted
+    // Time Complexity = O(logN)
     public static int binarySearch(int[] a,int key){
         int l = 0;
         int h = a.length-1;

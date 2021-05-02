@@ -22,12 +22,14 @@ public class Main {
 
         BigInteger b1 = new BigInteger(s1);
         BigInteger b2 = new BigInteger("246127487248782");
+
         //b1 = b1.add(b2);
         b1 = b1.multiply(b2);
         System.out.println(b1);
 
         //Bit Count - total Set of Bits
         System.out.println(b1.bitCount());
+
         //Total No of Bits
         System.out.println(b1.bitLength());
 
