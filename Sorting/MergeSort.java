@@ -50,6 +50,7 @@ public class MergeSort {
         if( l < h){
             int m = (l+h)/2; //same as (l+h)/2
 
+
             mergeSort(arr,l,m);
             mergeSort(arr,m+1,h);
             merge(arr,l,m,h);

@@ -1,4 +1,4 @@
-package Array;
+package Searching;
 
 public class Searching {
 
