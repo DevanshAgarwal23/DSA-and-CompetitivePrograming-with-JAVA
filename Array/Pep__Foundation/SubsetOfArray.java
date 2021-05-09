@@ -3,7 +3,7 @@ import java.util.*;
 
 //Good Question (important)
 //Subset of an array
-public class Sol10 {
+public class SubsetOfArray {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

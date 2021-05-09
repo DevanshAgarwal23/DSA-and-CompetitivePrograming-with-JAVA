@@ -2,7 +2,7 @@ package Array.Pep__Foundation;
 import java.io.*;
 
 //Print all Sub Array
-public class Sol9 {
+public class PrintSubArray {
     public static void main(String[] args) throws Exception {
         // write your code here
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

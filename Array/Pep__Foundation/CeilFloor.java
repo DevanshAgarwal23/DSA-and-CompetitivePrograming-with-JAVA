@@ -2,7 +2,7 @@ package Array.Pep__Foundation;
 import java.util.*;
 
 //Ceil and Floor
-public class Sol11 {
+public class CeilFloor {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n =sc.nextInt();

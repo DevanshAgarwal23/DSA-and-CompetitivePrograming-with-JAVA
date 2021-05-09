@@ -2,7 +2,7 @@ package Array.Pep__Foundation;
 import java.util.*;
 
 //Sum of two array
-public class Sol4 {
+public class SumTwoArray {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

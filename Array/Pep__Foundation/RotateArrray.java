@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.*;
 
 //Rotate an Array
-public class Sol7 {
+public class RotateArrray {
     public static void display(int[] a){
         StringBuilder sb = new StringBuilder();
 

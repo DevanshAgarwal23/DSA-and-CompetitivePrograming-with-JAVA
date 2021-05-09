@@ -3,7 +3,7 @@ package Array.Pep__Foundation;
 import java.io.*;
 
 //Inverse an Array
-public class Sol8 {
+public class InverseArray {
     public static void display(int[] a){
         StringBuilder sb = new StringBuilder();
 

@@ -2,7 +2,7 @@ package Array.Pep__Foundation;
 import java.util.*;
 
 //First index and Last Index
-public class Sol12 {
+public class FirstLastIndex {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();

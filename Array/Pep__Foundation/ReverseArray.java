@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.*;
 
 //Reverse an Array
-public class Sol6 {
+public class ReverseArray {
     public static void display(int[] a){
         StringBuilder sb = new StringBuilder();
 
