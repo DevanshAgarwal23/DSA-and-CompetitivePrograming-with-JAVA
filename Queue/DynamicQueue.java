@@ -1,5 +1,7 @@
 package Queue;
 
+import java.util.Scanner;
+
 public class DynamicQueue extends MyQueue {
 
     @Override
