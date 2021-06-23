@@ -486,6 +486,26 @@ public class BinaryTree {
         return totalSum;
     }
 
+    // ** way 1:---> alternate (making a variable in heap without declaring variable globally)
+    public int maxSubtreeSum(){
+        int[] maxSum = new int[1];
+        int maxRoot = maxSubtreeSum(root,maxSum);
+        return maxSum[0];
+    }
+    private int maxSubtreeSum(Node node,int[] maxSum){
+        if(node == null)
+            return 0;
+
+        int leftSum = maxSubtreeSum(node.left,maxSum);
+        int rightSum = maxSubtreeSum(node.right,maxSum);
+
+        int totalSum = leftSum+rightSum+node.data;
+
+        maxSum[0] = Math.max(maxSum[0],totalSum);
+
+        return totalSum;
+    }
+
 
 
     //way 2

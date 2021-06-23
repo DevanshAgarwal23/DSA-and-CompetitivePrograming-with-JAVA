@@ -1,8 +1,5 @@
 package Array;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.ListIterator;
+import java.util.*;
 
 //will see some basic methods that comes inbuilt in ArrayList Class
 // and some methods that we can apply on ArrayList using Collection class
@@ -10,7 +7,7 @@ import java.util.ListIterator;
 
 public class ArrayListJava {
     public static void main(String[] args){
-        ArrayList<Integer> arr = new ArrayList<>();
+        List<Integer> arr = new ArrayList<>();
         ArrayList<Integer> arr2 = new ArrayList<>();
 
         arr2.add(33);
@@ -31,6 +28,7 @@ public class ArrayListJava {
             System.out.print(val + " ");
 
         System.out.println();
+        System.out.println(arr.get(2));
 
         //traversing using iterator
         Iterator<Integer> i = arr.listIterator();

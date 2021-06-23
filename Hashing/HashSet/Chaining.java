@@ -1,4 +1,4 @@
-package Hashing;
+package Hashing.HashSet;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

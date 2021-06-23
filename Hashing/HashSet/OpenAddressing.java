@@ -1,4 +1,4 @@
-package Hashing;
+package Hashing.HashSet;
 //Linear Probing Method
 class MyHashClass {
     int[] arr;
