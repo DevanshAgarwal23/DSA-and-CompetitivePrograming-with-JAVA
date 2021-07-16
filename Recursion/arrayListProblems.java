@@ -185,9 +185,7 @@ public class arrayListProblems {
             return br;
         }
 
-
         ArrayList<String> mr = new ArrayList<>();
-
 
         for (int jump=1;jump<=3;jump++){
 
@@ -199,9 +197,6 @@ public class arrayListProblems {
                 mr.add(jump + val);
             }
         }
-
-
-
         /* self work
          for(String val : rr1){
              mr.add(1+val);
