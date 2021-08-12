@@ -12,7 +12,8 @@ public class printRecursion {
 //        subsequencesAscii("abc","");
 //        mazePath(0,0,2,2,"");
 //        climbingStairs(0,5,"");
-        validParenthesis(0,0,3,"");
+//      validParenthesis(0,0,3,"");
+        palindromePartitioning("aab"," ");
     }
 
 
@@ -199,25 +200,25 @@ public class printRecursion {
 
     //Palindrome Partitioning
 
-    void palindromePartitioning(String ques, String ans){
+   static void palindromePartitioning(String ques, String ans){
         if(ques.length()==0){
             System.out.println(ans);
             return;
         }
 
-        for(int i=1;i<ques.length();i++){
+        for(int i=1;i<=ques.length();i++){
             String part = ques.substring(0,i);
             String roq = ques.substring(i);
 
             if(isPalindrom(part)){
-                palindromePartitioning(roq,ans+part+"");
+                palindromePartitioning(roq,ans+part+" ");
             }
 
         }
 
     }
 
-    boolean isPalindrom(String str){
+   static boolean isPalindrom(String str){
 
         int i=0;
         int j=str.length()-1;
