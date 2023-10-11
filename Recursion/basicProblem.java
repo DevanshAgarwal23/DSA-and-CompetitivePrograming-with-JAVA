@@ -48,6 +48,7 @@ public class basicProblem {
 
     }
 
+
     public static int power(int x, int n) {
 
         if (n == 0) {
