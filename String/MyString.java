@@ -1,8 +1,18 @@
 package String;
 
+import java.util.*;
+
 public class MyString {
 
-    ublic static void main(String[] args) {
+    public static void main(String[] args) {
+		List<ArrayList<Integer>> graph = new ArrayList<>();
+		graph.add(new ArrayList<>());
+		HashMap<Integer, ArrayList<Integer>> gg = new HashMap<>();
+
+		for(ArrayList<Integer> s : graph){
+			System.out.println(s);
+		}
+
 
 		String str = "helloo"; // literal
 
