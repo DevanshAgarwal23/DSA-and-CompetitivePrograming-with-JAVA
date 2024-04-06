@@ -8,17 +8,17 @@ public class SBDemo {
 		StringBuilder sb = new StringBuilder();
 
 		// print
-		System.out.println(sb);
+		System.out.println(str);
 
 		// length
-		System.out.println(sb.length());
+		System.out.println(str.length());
 
 		// charAt : 0 -> length-1
-		System.out.println(sb.charAt(3)); // l
+		System.out.println(str.charAt(3)); // l
 
 		// substring
-		System.out.println(sb.substring(2)); // llo
-		System.out.println(sb.substring(1, 4)); // ell
+		System.out.println(str.substring(2)); // llo
+		System.out.println(str.substring(1, 4)); // ell
 
 		// append
 		sb.append("bye");
