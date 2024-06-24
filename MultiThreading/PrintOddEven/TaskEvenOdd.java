@@ -8,7 +8,7 @@ public class TaskEvenOdd implements Runnable {
     // standard constructors
 
 
-    public TaskEvenOdd(int max, Printer print, boolean isEvenNumber) {
+    public TaskEvenOdd(Printer print, int max, boolean isEvenNumber) {
         this.max = max;
         this.print = print;
         this.isEvenNumber = isEvenNumber;
