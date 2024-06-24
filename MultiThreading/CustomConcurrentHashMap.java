@@ -10,9 +10,9 @@ import java.util.concurrent.locks.ReentrantLock;
 public class CustomConcurrentHashMap<K, V> {
 
     private static final int DEFAULT_CAPACITY = 16;
-    private static final float LOAD_FACTOR = 0.75f;
+    //private static final float LOAD_FACTOR = 0.75f;
     private final int capacity;
-    private final float loadFactor;
+    //private final float loadFactor;
     private List<Node<K, V>>[] buckets;
     private ReentrantLock[] locks;
 
@@ -22,7 +22,7 @@ public class CustomConcurrentHashMap<K, V> {
 
     public CustomConcurrentHashMap(int capacity) {
         this.capacity = capacity;
-        this.loadFactor = LOAD_FACTOR;
+        //this.loadFactor = LOAD_FACTOR;
         this.buckets = new ArrayList[capacity];
         this.locks = new ReentrantLock[capacity];
         for (int i = 0; i < capacity; i++) {
