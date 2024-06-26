@@ -5,7 +5,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 
-public class CouponQuestion {
+public class CouponQuestionV4 {
     enum DiscountType {
         PERCENT,
         ABSOLUTE
