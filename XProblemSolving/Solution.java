@@ -3,71 +3,108 @@ package XProblemSolving;
 import java.util.*;
 class Solution
 {
-    public int minStepToReachTarget(int source[], int destination[], int N)
-    {
 
-        ArrayList<Node> possiblePlace = new ArrayList<>();
-        possiblePlace.add(new Node(1,2));
-        possiblePlace.add(new Node(1,-2));
-        possiblePlace.add(new Node(-1,2));
-        possiblePlace.add(new Node(-1,-2));
-        possiblePlace.add(new Node(2,1));
-        possiblePlace.add(new Node(2,-1));
-        possiblePlace.add(new Node(-2,1));
-        possiblePlace.add(new Node(-2,-1));
+    public static void main(String[] args) {
+        System.out.println(findPossibleSmallestNumberMatchingPattern("MNM"));
+        System.out.println(collapseString("GGGGGrrrrrrrrrrrrrrt"));
+    }
 
-        Queue<Node> q = new LinkedList<>();
-        int[][] visited = new int[N+1][N+1];
-        visited[source[0]][source[1]] = 1;
-        q.add(new Node(source[0], source[1], 0));
-
-        while(!q.isEmpty()){
-            Node cur = q.remove();
-
-            if(cur.row == destination[0] && cur.col == destination[1]) return cur.dist;
-
-
-            for(Node p: possiblePlace){
-                int x =cur.row+p.row;
-                int y = cur.col+p.col;
-
-                if(!isValid(x,y,N)) continue;
-
-                if(visited[x][y] != 1){
-                    int dist = cur.dist+1;
-                    if(x == destination[0] && y == destination[1]) return dist;
-                    visited[x][y]=1;
-                    q.add(new Node(x,y,dist));
-                }
-
-            }
-        }
-
-        return -1;
+    // 2nd question 
+    static int findPossibleSmallestNumberMatchingPattern(String pattern) {
+        if (validatePattern(pattern))
+            return -1;
+        return Integer.parseInt(processString(pattern));
 
     }
 
-         boolean isValid(int x, int y, int N){
-            if(x<N && x>=0 && y<N && y>=0) return true;
+    static boolean validatePattern(String pattern) {
+        return (pattern.equals("") || pattern == "" || pattern == " " || pattern == null
+                || getMNCount(pattern) != pattern.length());
+    }
 
-            return false;
+    static int getMNCount(String pattern) {
+        int mCount = 0, nCount = 0;
+        for (int i = 0; i < pattern.length(); i++) {
+            if (pattern.charAt(i) == 'M') {
+                mCount++;
+            }
+            if (pattern.charAt(i) == 'N') {
+                nCount++;
+            }
         }
+        return nCount + mCount;
+    }
 
-    class Node {
-        int row;
-        int col;
-        int dist;
+    static String processString(String input) {
+        PriorityQueue<Integer> heap = new PriorityQueue<Integer>();
+        String result = "";
+        int len = input.length();
+        for (int k = 1; k <= len + 1; k++)
+            heap.add(k);
+        int mCount = 0;
+        int nCount = 0;
+        for (int i = 0; i < len; i++) {
+            if (input.charAt(i) == 'M') {
+                mCount = getConsecutiveCount(input, i, 'M');
+                result += getElement(mCount + 1, heap);
+                mCount = 0;
+            } else {
+                result += getElement(1, heap);
+                nCount = 0;
+            }
 
-        Node(int row, int col, int dist){
-            this.row = row;
-            this.col = col;
-            this.dist = dist;
         }
+        return result + heap.poll();
+    }
 
-        Node(int row, int col){
-            this.row = row;
-            this.col = col;
-            this.dist = -1;
+    static int getConsecutiveCount(String input, int index, char ch) {
+        int count = 0;
+        for (int i = index; i < input.length(); i++) {
+            if (input.charAt(i) == ch) {
+                count++;
+            } else {
+                break;
+            }
         }
+        return count;
+
+    }
+
+    static String getElement(int count, PriorityQueue<Integer> heap) {
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<Integer>();
+        int element = 0;
+        while (count-- > 0) {
+            element = heap.poll();
+            if (count > 0) {
+                priorityQueue.add(element);
+            } else {
+                break;
+            }
+        }
+        heap.addAll(priorityQueue);
+        return Integer.toString(element);
+    }
+
+
+
+    // 1st question
+    public static String collapseString(String inputString) {
+        if(null == inputString)
+            return null;
+        StringBuilder output = new StringBuilder();
+        char currentChar = inputString.charAt(0);
+        int repeating = 1, start=0;
+        for(int i=1; i<inputString.length(); i++) {
+            if(inputString.charAt(i) == currentChar) {
+                repeating++;
+            }else {
+                output.append(repeating).append(currentChar);
+                start=i;
+                repeating = 1;
+                currentChar =inputString.charAt(i);
+            }
+        }
+        output.append(repeating).append(currentChar);
+        return output.toString();
     }
 }
